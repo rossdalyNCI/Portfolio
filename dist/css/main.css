@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 1.5s ease-out; }
+  transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -40,27 +40,27 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #1f505b;
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #25616e;
     transform: translate3d(0, 100%, 0);
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/portrait.jpg");
+      background: url("../img/portraitNew1.jpg");
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -74,7 +74,7 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #eece1a; }
 
@@ -94,7 +94,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #25616e;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -112,7 +112,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(37, 97, 110, 0.9); }
 
 h1,
 h2,
@@ -128,7 +128,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(40, 104, 118, 0.5); }
 
 a {
   color: #fff;
@@ -151,7 +151,7 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #eece1a;
-        transition: all 1.5s ease-out; }
+        transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -177,16 +177,53 @@ main {
   .about-info .job3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #2b7281;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #eece1a;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #aedae4;
+  color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
+  background: #183f48;
   color: #fff;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -209,13 +246,17 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
+      background: url("../img/portrait_smallNew.jpg");
       width: 150px;
       height: 150px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }

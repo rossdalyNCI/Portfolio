@@ -1,11 +1,11 @@
-$primary-color: #444;
+$primary-color: #25616e;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/backgroundbrad.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
-    transition: all 1.5s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 @mixin background {
